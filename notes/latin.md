@@ -980,7 +980,6 @@ Future imperative (ignore for A level), used when there is a distinct reference 
     - si hoc feceris, te puniam → dixit se eum puniturum esse si id fecisset (he said he would punish him if he did it)
     - In a closed conditional about the past, the apodosis becomes -urus fuisse: dixit se eum puniturum fuisse si id fecisset (he said he would have punished him if he had done it).
 - Note that if a subordinate clause is the writer’s own comment rather than part of what was said, it stays indicative: dixit urbem, quae prope erat, captam esse (‘which was nearby’ is the writer’s fact, not part of the report).
-- (Post A level) In long stretches of reported speech, often in Livy and Caesar, main-clause commands become subjunctive (ne for negatives), and so do main-clause questions.
 
 ### Relative clauses
 
