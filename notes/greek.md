@@ -1519,25 +1519,7 @@ x – ⏑ – | x – ⏑ – | x – ⏑ –
 - Synizesis: two vowels in a word sometimes merge into one long syllable (θεος as one syllable; -εως in πολεως).
 - Unlike Latin, ε and ο are always short and η and ω always long, so many syllables can be marked straight away.
 
-## Unseen & prose tips
-
-> Personal tips for translation and composition
-
-### Unseen translation
-
-- Use the English! If there’s a few lines of English for context, use it for vocab and for a general idea of what’s going on. In verse, generally there’ll be around three major points.
-- If word order is throwing you off, go very literally. Translating each word by itself can give you a general idea of what’s going on.
-- If in doubt about how to translate something, stay literal.
-- Sometimes reading ahead to the next sentence gives enough context to fill in the blanks.
-- For words you don’t know, try to derive a meaning from a cognate or from context.
-- Don’t jump ahead in guessing what’s going on; it can lead you down a slippery slope and waste time.
-- In verse, imperatives are much more common, so be careful not to mix them up with nouns.
-- Split sentences (or lines) at hard punctuation, then into clauses where possible.
-- Marking in agreements beforehand never hurts.
-- In Xenophon, sentences often stack participles and genitive absolutes before the main verb. Find the main verb first.
-- In verse, scan the lines to tell apart forms that look ambiguous.
-
-### Particles
+## Particles
 
 Most come second in their clause, and many are best left untranslated or rendered by tone.
 
@@ -1555,17 +1537,3 @@ Most come second in their clause, and many are best left untranslated or rendere
 | καιτοι | and yet |
 | ἀρα | then, so (not the question ἆρα) |
 | που | I suppose, surely |
-
-### Prose composition
-
-- Use any context where possible.
-- If you’re unsure how to translate a phrase or word, find a synonymous phrase or word to replace it.
-- Watch the agreements carefully.
-- Write breathings: OCR expects them in composition. Accents aren’t needed.
-- Don’t rush into chasing style marks; it’s better to be literally correct than to make a mistake going for an extra mark.
-- Style marks can come from (not exhaustive):
-    - connecting every sentence to the last (δε, γαρ, οὖν, και); Greek rarely leaves a sentence unconnected
-    - correct word order, especially particles that come second (δε, γαρ, οὖν, μεν)
-    - μεν… δε for contrasts
-    - participles and genitive absolutes instead of subordinate clauses
-    - the article sandwich (ὁ ἐν τῃ πολει ἀνηρ, the man in the city)
