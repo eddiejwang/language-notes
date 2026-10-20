@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F3F5F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11161B" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Latin">
+<title>Latin notes</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<script src="vendor/marked.min.js"></script>
+<style>
+:root{
+  --bg:#F3F5F4; --surface:#FFFFFF; --ink:#1B222B; --muted:#5A646D; --rule:#D7DDDA;
+  --accent:#1D6F5D; --on-accent:#FFFFFF; --tint:#E3EBE7; --raised:#FFFFFF; --mark:#C6E5D9; --grp:#EDF1EF;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --barh:56px;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#11161B; --surface:#182026; --ink:#E3E7E5; --muted:#96A0A7; --rule:#29333A;
+    --accent:#5CBEA4; --on-accent:#0D1A16; --tint:#1B2826; --raised:#33424C; --mark:#22574A; --grp:#1D252B;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#11161B; --surface:#182026; --ink:#E3E7E5; --muted:#96A0A7; --rule:#29333A;
+  --accent:#5CBEA4; --on-accent:#0D1A16; --tint:#1B2826; --raised:#33424C; --mark:#22574A; --grp:#1D252B;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none !important}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.55;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+
+/* Bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;align-items:center;gap:6px;height:var(--barh);
+  padding:0 max(12px,env(safe-area-inset-right,0px)) 0 max(12px,env(safe-area-inset-left,0px));background:var(--bg);border-bottom:1px solid var(--rule)}
+.bar .inner{display:flex;align-items:center;gap:6px;width:100%;max-width:720px;margin:0 auto}
+.back,.cancel{flex:none;display:flex;align-items:center;gap:1px;background:none;border:0;color:var(--accent);font:16px/1 var(--sans);padding:10px 4px 10px 0;white-space:nowrap}
+.back svg{width:20px;height:20px}
+.cancel{padding:10px 0 10px 6px}
+.search{flex:1;min-width:0;display:flex;align-items:center;gap:6px;height:38px;padding:0 10px;background:var(--surface);border:1px solid var(--rule);border-radius:10px}
+.search:focus-within{border-color:var(--accent)}
+.search svg{flex:none;width:17px;height:17px;color:var(--muted)}
+.search input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:16px var(--sans);outline:none;-webkit-appearance:none;appearance:none;padding:0}
+.search input::-webkit-search-cancel-button{display:none}
+.search input::placeholder{color:var(--muted)}
+
+main{max-width:720px;margin:0 auto;padding:6px max(18px,env(safe-area-inset-right,0px)) 56px max(18px,env(safe-area-inset-left,0px))}
+
+/* Contents */
+.cover h1{font-size:52px;line-height:1;font-weight:600;letter-spacing:-.015em;margin:26px 0 22px}
+.toc{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.toc a{display:grid;grid-template-columns:1fr auto;column-gap:12px;padding:13px 2px 14px;border-bottom:1px solid var(--rule);color:inherit;text-decoration:none}
+.toc .t{font-size:22px;line-height:1.2}
+.toc .d{grid-column:1;font:14px/1.35 var(--sans);color:var(--muted);margin-top:4px}
+.toc svg{grid-column:2;grid-row:1/span 2;align-self:center;width:18px;height:18px;color:var(--muted)}
+.toc a.live .t{color:var(--accent)}
+.toc a:active{background:var(--tint)}
+
+/* Section */
+h1.title{font-size:34px;line-height:1.1;font-weight:600;letter-spacing:-.01em;margin:22px 0 12px}
+.chips{display:flex;gap:8px;overflow-x:auto;margin:0 -18px 6px;padding:2px 18px 10px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;font:14px/1 var(--sans);color:var(--ink);background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:8px 12px;text-decoration:none;white-space:nowrap}
+.chip:active{background:var(--tint)}
+.prose h3{font-size:23px;line-height:1.25;font-weight:600;margin:30px 0 8px}
+.prose h4{font-size:18px;font-style:italic;font-weight:600;margin:20px 0 4px}
+.prose p{margin:8px 0}
+.prose ul,.prose ol{margin:6px 0 10px;padding-left:1.25em}
+.prose li{margin:5px 0}
+.prose li>ul,.prose li>ol{margin:3px 0 4px}
+.prose li::marker{color:var(--accent)}
+.prose ol>li::marker{font:600 15px var(--sans)}
+.prose h3,.prose [data-b]{scroll-margin-top:calc(var(--barh) + env(safe-area-inset-top,0px) + 14px)}
+
+/* Tables */
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0 16px;border:1px solid var(--rule);border-radius:10px;background:var(--surface)}
+.tbl table{border-collapse:separate;border-spacing:0;min-width:100%;font-size:15.5px;line-height:1.35}
+.tbl th,.tbl td{padding:7px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule);background:var(--surface)}
+.tbl td{min-width:6.5em}
+.tbl .nw{white-space:nowrap}
+.tbl tbody tr:last-child>*{border-bottom:0}
+.tbl thead th{font:600 13px/1.3 var(--sans);color:var(--muted);white-space:nowrap}
+.tbl thead th span{display:block;font:italic 400 14px/1.3 var(--serif);color:var(--ink);margin-top:2px}
+.tbl thead th:first-child,.tbl tbody td:first-child{position:sticky;left:0;z-index:1;border-right:1px solid var(--rule)}
+.tbl tbody td:first-child{font:14px/1.4 var(--sans);color:var(--muted);min-width:0;white-space:nowrap}
+.tbl tr.grp th{padding:5px 0;background:var(--grp);font:italic 600 14.5px var(--serif);color:var(--ink)}
+.tbl tr.grp th span{position:sticky;left:12px;padding:0 12px}
+
+/* Highlight after a jump */
+.flash,tr.flash>*{animation:flash 2.6s ease-out}
+@keyframes flash{0%,35%{background:var(--mark)}100%{}}
+@media (prefers-reduced-motion: reduce){.flash,tr.flash>*{animation:none;background:var(--mark)}}
+
+/* Pager */
+.pager{display:flex;justify-content:space-between;gap:16px;margin-top:44px;padding-top:14px;border-top:1px solid var(--rule)}
+.pager a{display:block;max-width:48%;color:var(--accent);text-decoration:none;font:16px/1.3 var(--serif)}
+.pager a.next{text-align:right;margin-left:auto}
+.pager small{display:block;font:13px var(--sans);color:var(--muted);margin-bottom:3px}
+
+/* Search results */
+.count{font:14px var(--sans);color:var(--muted);margin:14px 2px 4px}
+.results{list-style:none;margin:0;padding:0}
+.results a{display:block;padding:12px 2px 13px;border-bottom:1px solid var(--rule);color:inherit;text-decoration:none}
+.results a:active{background:var(--tint)}
+.crumb{font:13px/1.3 var(--sans);color:var(--muted);margin-bottom:3px}
+.snip{font-size:16px;line-height:1.45}
+mark{background:var(--mark);color:inherit;border-radius:3px;padding:0 1px}
+.empty{font:15px/1.5 var(--sans);color:var(--muted);margin:28px 2px}
+
+/* Verb tables */
+.seg{display:flex;gap:3px;padding:3px;margin:10px 0;background:var(--tint);border-radius:10px}
+.seg button{flex:1;border:0;background:transparent;font:15px/1.2 var(--sans);padding:8px 6px;border-radius:8px}
+.seg button[aria-pressed="true"]{background:var(--raised);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.tenses{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.tenses button{font:14px/1 var(--sans);background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:9px 12px}
+.tenses button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent);font-weight:600}
+.tenses button:disabled{opacity:.38;cursor:default}
+.prose h3.vt-title{margin:22px 0 4px}
+.note{font:14.5px/1.45 var(--sans);color:var(--muted);margin:4px 0 0}
+table.forms td{white-space:nowrap}
+.model{font:14.5px/1.45 var(--sans);color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="inner">
+    <button class="back" id="back" type="button" hidden aria-label="Back to contents">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span>Contents</span>
+    </button>
+    <label class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L20 20"/></svg>
+      <input id="q" type="search" placeholder="Search notes" aria-label="Search notes" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">
+    </label>
+    <button class="cancel" id="cancel" type="button" hidden>Cancel</button>
+  </div>
+</header>
+<main id="main"></main>
+<script>
+let DATA = null;
+const KEY = 'notes:last';
+const main = document.getElementById('main');
+const q = document.getElementById('q');
+const back = document.getElementById('back');
+const cancel = document.getElementById('cancel');
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const norm = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[’‘]/g, "'");
+const CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>';
+const PERSONS = ['1st sg.', '2nd sg.', '3rd sg.', '1st pl.', '2nd pl.', '3rd pl.'];
+const MOODS = [['ind', 'Indicative'], ['sub', 'Subjunctive']];
+const VOICES = [['act', 'Active'], ['pas', 'Passive']];
+const TENSES = {
+  ind: [['pres', 'Present'], ['fut', 'Future'], ['impf', 'Imperfect'], ['perf', 'Perfect'], ['plup', 'Pluperfect'], ['futp', 'Future perfect']],
+  sub: [['pres', 'Present'], ['impf', 'Imperfect'], ['perf', 'Perfect'], ['plup', 'Pluperfect'], ['fut', 'Future'], ['fip', 'Future-in-the-past']]
+};
+const tName = (m, t) => TENSES[m].find(x => x[0] === t)[1];
+const vTitle = (m, v, t) => `${tName(m, t)} ${v === 'act' ? 'active' : 'passive'} ${m === 'ind' ? 'indicative' : 'subjunctive'}`;
+const INDEX = [];
+let backTo = null;
+
+function ownText(el) {
+  let s = '';
+  el.childNodes.forEach(n => {
+    if (n.nodeType === 3) s += n.textContent;
+    else if (n.nodeType === 1 && !/^(UL|OL)$/.test(n.tagName)) s += n.textContent;
+  });
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+function prep() {
+  for (const nb of DATA.notebooks) {
+    for (const sec of nb.sections) {
+      const t = document.createElement('template');
+      t.innerHTML = sec.html;
+      const root = t.content;
+      root.querySelectorAll('table').forEach(tb => {
+        const wrap = document.createElement('div');
+        wrap.className = 'tbl';
+        tb.before(wrap);
+        wrap.append(tb);
+        tb.querySelectorAll('[align],[style]').forEach(c => { c.removeAttribute('align'); c.removeAttribute('style'); });
+        tb.querySelectorAll('tbody tr').forEach(tr => {
+          const cells = [...tr.children];
+          if (cells.length > 1 && cells.slice(1).every(c => !c.textContent.trim())) {
+            const th = document.createElement('th');
+            th.colSpan = cells.length;
+            th.scope = 'colgroup';
+            const sp = document.createElement('span');
+            sp.textContent = cells[0].textContent.trim();
+            th.append(sp);
+            tr.className = 'grp';
+            tr.replaceChildren(th);
+          }
+        });
+        tb.querySelectorAll('td,th').forEach(c => { if (c.textContent.trim().length <= 22) c.classList.add('nw'); });
+      });
+      sec.subs = [];
+      let sub = '', n = 0;
+      root.querySelectorAll('h3,h4,p,li,tbody tr:not(.grp)').forEach(el => {
+        if (el.tagName === 'P' && el.closest('li')) return;
+        if (el.tagName === 'H3') {
+          el.id = 'h' + sec.subs.length;
+          sub = el.textContent.trim();
+          sec.subs.push({ id: el.id, title: sub });
+        }
+        let text;
+        if (el.tagName === 'LI') text = ownText(el);
+        else if (el.tagName === 'TR') {
+          const c = [...el.children].map(x => x.textContent.trim()).filter(Boolean);
+          text = c.length > 1 ? c[0] + ': ' + c.slice(1).join(', ') : c.join('');
+        } else text = el.textContent.replace(/\s+/g, ' ').trim();
+        if (!text) return;
+        el.dataset.b = n;
+        INDEX.push({
+          href: `#/n/${nb.id}/${sec.id}/b${n}`,
+          crumb: (DATA.notebooks.length > 1 ? nb.title + ' › ' : '') + sec.title + (sub && el.tagName !== 'H3' ? ' › ' + sub : ''),
+          text, n: norm(text), head: el.tagName === 'H3' || el.tagName === 'H4'
+        });
+        n++;
+      });
+      const d = document.createElement('div');
+      d.append(root);
+      sec.html = d.innerHTML;
+    }
+    const vsec = nb.sections.find(s => s.verbs);
+    if (nb.verbs && vsec) {
+      const T = nb.verbs.tables;
+      for (const m in T) for (const v in T[m]) for (const t in T[m][v]) {
+        T[m][v][t].forEach((row, r) => row.forEach((form, c) => {
+          INDEX.push({
+            href: `#/n/${nb.id}/${vsec.id}/${m}.${v}.${t}.${r}.${c}`,
+            crumb: vsec.title + ' › ' + vTitle(m, v, t),
+            text: `${form}: ${nb.verbs.conj[c].name.toLowerCase()} conjugation, ${PERSONS[r]}`,
+            n: norm(form), form: true
+          });
+        }));
+      }
+    }
+  }
+}
+
+function route() {
+  const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
+  const nbs = DATA.notebooks;
+  if (parts[0] === 'n') {
+    const nb = nbs.find(x => x.id === parts[1]) || nbs[0];
+    return { nb, sec: nb.sections.find(s => s.id === parts[2]) || null, extra: parts[3] || null };
+  }
+  return { nb: nbs.length === 1 ? nbs[0] : null, sec: null, extra: null };
+}
+
+function save() { try { localStorage.setItem(KEY, location.hash || '#/'); } catch (e) {} }
+
+function setBack(to, label) {
+  backTo = to;
+  back.hidden = !to;
+  back.querySelector('span').textContent = label || 'Contents';
+}
+
+function renderHome() {
+  setBack(null);
+  main.innerHTML = `<div class="cover"><h1>Notes</h1></div>
+  <ul class="toc">${DATA.notebooks.map(nb => `<li><a href="#/n/${nb.id}"><span class="t">${esc(nb.title)}</span><span class="d">${esc(nb.sections.map(s => s.title).join(', '))}</span>${CHEV}</a></li>`).join('')}</ul>`;
+}
+
+function renderContents(nb) {
+  if (DATA.notebooks.length > 1) setBack('#/', 'Notes'); else setBack(null);
+  main.innerHTML = `<div class="cover"><h1>${esc(nb.title)}</h1></div>
+  <ul class="toc">${nb.sections.map(s => `<li><a href="#/n/${nb.id}/${s.id}"${s.verbs ? ' class="live"' : ''}><span class="t">${esc(s.title)}</span>${s.blurb ? `<span class="d">${esc(s.blurb)}</span>` : ''}${CHEV}</a></li>`).join('')}</ul>`;
+}
+
+function renderSection(nb, sec, extra) {
+  setBack(`#/n/${nb.id}`, 'Contents');
+  const i = nb.sections.indexOf(sec);
+  const prev = nb.sections[i - 1], next = nb.sections[i + 1];
+  const chips = sec.subs.length >= 3
+    ? `<nav class="chips" aria-label="In this section">${sec.subs.map(s => `<a class="chip" href="#" data-jump="${s.id}">${esc(s.title)}</a>`).join('')}</nav>` : '';
+  const pager = `<nav class="pager" aria-label="Sections">${prev ? `<a class="prev" href="#/n/${nb.id}/${prev.id}"><small>Previous</small>${esc(prev.title)}</a>` : ''}${next ? `<a class="next" href="#/n/${nb.id}/${next.id}"><small>Next</small>${esc(next.title)}</a>` : ''}</nav>`;
+  main.innerHTML = `<h1 class="title">${esc(sec.title)}</h1>${chips}<div class="prose">${sec.html}</div>${pager}`;
+  if (sec.verbs) mountVerbs(nb, sec, extra);
+}
+
+function mountVerbs(nb, sec, extra) {
+  const host = main.querySelector('#verb-app');
+  if (!host || !nb.verbs) return;
+  const T = nb.verbs.tables, conj = nb.verbs.conj, notes = nb.verbs.notes || {};
+  let [m, v, t, r, c] = (extra || '').split('.');
+  if (!T[m]) m = 'ind';
+  if (!T[m][v]) v = 'act';
+  if (!T[m][v][t]) t = 'pres';
+  const st = { m, v, t };
+  const draw = hl => {
+    const rows = T[st.m][st.v][st.t];
+    const note = notes[`${st.m}.${st.v}.${st.t}`] || '';
+    host.innerHTML = `
+      <p class="model">Model verbs: ${conj.map(x => `${esc(x.verb)} (${esc(x.name.toLowerCase())})`).join(', ')}.</p>
+      <div class="seg" role="group" aria-label="Mood">${MOODS.map(([k, l]) => `<button type="button" data-k="m" data-v="${k}" aria-pressed="${st.m === k}">${l}</button>`).join('')}</div>
+      <div class="seg" role="group" aria-label="Voice">${VOICES.map(([k, l]) => `<button type="button" data-k="v" data-v="${k}" aria-pressed="${st.v === k}">${l}</button>`).join('')}</div>
+      <div class="tenses" role="group" aria-label="Tense">${TENSES[st.m].map(([k, l]) => `<button type="button" data-k="t" data-v="${k}" aria-pressed="${st.t === k}"${T[st.m][st.v][k] ? '' : ' disabled'}>${l}</button>`).join('')}</div>
+      <h3 class="vt-title">${esc(vTitle(st.m, st.v, st.t))}</h3>
+      ${note ? `<p class="note">${esc(note)}</p>` : ''}
+      <div class="tbl"><table class="forms"><thead><tr><th scope="col">Person</th>${conj.map(x => `<th scope="col">${esc(x.name)}<span>${esc(x.verb)}</span></th>`).join('')}</tr></thead>
+      <tbody>${rows.map((row, ri) => `<tr><td>${PERSONS[ri]}</td>${row.map((f, ci) => `<td data-rc="${ri}.${ci}">${esc(f)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+    if (hl) {
+      const cell = host.querySelector(`[data-rc="${hl}"]`);
+      if (cell) {
+        cell.classList.add('flash');
+        requestAnimationFrame(() => cell.scrollIntoView({ block: 'center', inline: 'center' }));
+      }
+    }
+  };
+  host.onclick = e => {
+    const b = e.target.closest('button[data-k]');
+    if (!b || b.disabled) return;
+    st[b.dataset.k] = b.dataset.v;
+    if (!T[st.m][st.v][st.t]) st.t = 'pres';
+    history.replaceState(null, '', `#/n/${nb.id}/${sec.id}/${st.m}.${st.v}.${st.t}`);
+    save();
+    draw(null);
+  };
+  draw(r !== undefined && c !== undefined ? `${r}.${c}` : null);
+}
+
+function render() {
+  const { nb, sec, extra } = route();
+  q.value = '';
+  cancel.hidden = true;
+  document.body.classList.remove('searching');
+  window.scrollTo(0, 0);
+  if (sec) renderSection(nb, sec, extra);
+  else if (nb) renderContents(nb);
+  else renderHome();
+  document.title = sec ? `${sec.title}: ${nb.title}` : nb ? `${nb.title} notes` : 'Notes';
+  if (extra && extra[0] === 'b') {
+    const el = main.querySelector(`[data-b="${extra.slice(1)}"]`);
+    if (el) {
+      el.classList.add('flash');
+      requestAnimationFrame(() => el.scrollIntoView({ block: 'center' }));
+    }
+  }
+  save();
+}
+
+function snippet(text, terms) {
+  const nt = norm(text);
+  const src = nt.length === text.length ? text : nt;
+  let first = Infinity;
+  for (const t of terms) { const i = nt.indexOf(t); if (i >= 0 && i < first) first = i; }
+  if (first === Infinity) first = 0;
+  let start = Math.max(0, first - 45), end = Math.min(src.length, start + 160);
+  if (start > 0) { const sp = src.indexOf(' ', start); if (sp >= 0 && sp < first) start = sp + 1; }
+  if (end < src.length) { const sp = src.lastIndexOf(' ', end); if (sp > first) end = sp; }
+  const marks = new Array(end - start).fill(false);
+  for (const t of terms) {
+    let i = nt.indexOf(t, start);
+    while (i >= 0 && i < end) {
+      for (let k = i; k < Math.min(i + t.length, end); k++) marks[k - start] = true;
+      i = nt.indexOf(t, i + t.length);
+    }
+  }
+  let out = start > 0 ? '…' : '', open = false;
+  for (let k = 0; k < marks.length; k++) {
+    if (marks[k] && !open) { out += '<mark>'; open = true; }
+    if (!marks[k] && open) { out += '</mark>'; open = false; }
+    out += esc(src[start + k]);
+  }
+  if (open) out += '</mark>';
+  if (end < src.length) out += '…';
+  return out;
+}
+
+function showResults(v) {
+  document.body.classList.add('searching');
+  back.hidden = true;
+  cancel.hidden = false;
+  const terms = norm(v).split(/\s+/).filter(Boolean);
+  const whole = norm(v).trim();
+  const hits = [];
+  for (const e of INDEX) {
+    if (!terms.every(t => e.n.includes(t))) continue;
+    let s = 0;
+    for (const t of terms) {
+      const re = new RegExp('(^|[^a-z])' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '($|[^a-z])');
+      s += re.test(e.n) ? 2 : 1;
+    }
+    if (e.form && e.n === whole) s += 4;
+    if (e.head) s += 1;
+    hits.push([s, e]);
+  }
+  hits.sort((a, b) => b[0] - a[0]);
+  const top = hits.slice(0, 60);
+  main.innerHTML = top.length
+    ? `<p class="count">${hits.length} result${hits.length === 1 ? '' : 's'}${hits.length > 60 ? ', showing the first 60' : ''}</p>
+       <ul class="results">${top.map(([, e]) => `<li><a href="${e.href}"><div class="crumb">${esc(e.crumb)}</div><div class="snip">${snippet(e.text, terms)}</div></a></li>`).join('')}</ul>`
+    : `<p class="empty">Nothing matches “${esc(v)}”. Try a shorter word, or a different form of it.</p>`;
+  window.scrollTo(0, 0);
+}
+
+q.addEventListener('focus', () => { cancel.hidden = false; back.hidden = true; });
+q.addEventListener('blur', () => { if (!q.value.trim()) { cancel.hidden = true; back.hidden = !backTo; } });
+q.addEventListener('input', () => {
+  if (!DATA) return;
+  const v = q.value.trim();
+  if (v) showResults(v);
+  else if (document.body.classList.contains('searching')) { render(); q.focus(); }
+});
+q.addEventListener('keydown', e => { if (e.key === 'Enter') q.blur(); });
+cancel.addEventListener('click', () => { q.value = ''; q.blur(); if (DATA) render(); });
+back.addEventListener('click', () => { location.hash = backTo || '#/'; });
+main.addEventListener('click', e => {
+  const chip = e.target.closest('[data-jump]');
+  if (chip) {
+    e.preventDefault();
+    const h = document.getElementById(chip.dataset.jump);
+    if (h) h.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
+    return;
+  }
+  const a = e.target.closest('.results a');
+  if (a && a.getAttribute('href') === location.hash) { e.preventDefault(); render(); }
+});
+
+function start() {
+  prep();
+  if (!location.hash) {
+    let last = null;
+    try { last = localStorage.getItem(KEY); } catch (e) {}
+    if (last && last.startsWith('#/')) history.replaceState(null, '', last);
+  }
+  render();
+  window.addEventListener('hashchange', render);
+}
+
+function slug(t) {
+  return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+function parseNotebook(md) {
+  md = md.replace(/\r\n?/g, '\n');
+  const used = new Set();
+  return md.split(/^## /m).slice(1).map(chunk => {
+    const nl = chunk.indexOf('\n');
+    const title = (nl < 0 ? chunk : chunk.slice(0, nl)).trim();
+    let body = nl < 0 ? '' : chunk.slice(nl + 1);
+    let blurb = '';
+    const m = body.match(/^\s*>\s?(.*)\n?/);
+    if (m) { blurb = m[1].trim(); body = body.slice(m[0].length); }
+    const base = slug(title) || 'section';
+    let id = base, k = 2;
+    while (used.has(id)) id = `${base}-${k++}`;
+    used.add(id);
+    const marker = /^\s*\[\[verb tables\]\]\s*$/mi;
+    const verbs = marker.test(body);
+    body = body.replace(marker, '<div id="verb-app"></div>');
+    return { id, title, blurb, verbs, html: marked.parse(body) };
+  });
+}
+async function getText(url) {
+  const r = await fetch(url, { cache: 'no-cache' });
+  if (!r.ok) throw new Error(`couldn’t open ${url}`);
+  return r.text();
+}
+async function boot() {
+  main.innerHTML = '<p class="empty">Loading…</p>';
+  try {
+    let list;
+    try { list = JSON.parse(await getText('notebooks.json')); }
+    catch (e) { throw new Error(e.message.startsWith('couldn') ? e.message : 'notebooks.json has a typo (check the commas and quotation marks)'); }
+    const nbs = await Promise.all(list.map(async n => {
+      const id = n.file.split('/').pop().replace(/\.md$/i, '');
+      const [md, vj] = await Promise.all([getText(n.file), n.verbs ? getText(n.verbs) : null]);
+      return { id, title: n.title, sections: parseNotebook(md), verbs: vj ? JSON.parse(vj) : null };
+    }));
+    DATA = { notebooks: nbs };
+  } catch (err) {
+    main.innerHTML = `<p class="empty">The notes didn’t load: ${esc(err.message)}. If you’ve just edited notebooks.json on GitHub, check the file names in it match the files in the notes folder.</p>`;
+    return;
+  }
+  start();
+}
+boot();
+
+</script>
+<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});</script>
+</body>
+</html>

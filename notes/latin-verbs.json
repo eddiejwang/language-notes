@@ -1,0 +1,1019 @@
+{
+ "conj": [
+  {
+   "name": "1st",
+   "verb": "porto"
+  },
+  {
+   "name": "2nd",
+   "verb": "moneo"
+  },
+  {
+   "name": "3rd",
+   "verb": "traho"
+  },
+  {
+   "name": "Mixed",
+   "verb": "capio"
+  },
+  {
+   "name": "4th",
+   "verb": "audio"
+  }
+ ],
+ "tables": {
+  "ind": {
+   "act": {
+    "pres": [
+     [
+      "porto",
+      "moneo",
+      "traho",
+      "capio",
+      "audio"
+     ],
+     [
+      "portas",
+      "mones",
+      "trahis",
+      "capis",
+      "audis"
+     ],
+     [
+      "portat",
+      "monet",
+      "trahit",
+      "capit",
+      "audit"
+     ],
+     [
+      "portamus",
+      "monemus",
+      "trahimus",
+      "capimus",
+      "audimus"
+     ],
+     [
+      "portatis",
+      "monetis",
+      "trahitis",
+      "capitis",
+      "auditis"
+     ],
+     [
+      "portant",
+      "monent",
+      "trahunt",
+      "capiunt",
+      "audiunt"
+     ]
+    ],
+    "fut": [
+     [
+      "portabo",
+      "monebo",
+      "traham",
+      "capiam",
+      "audiam"
+     ],
+     [
+      "portabis",
+      "monebis",
+      "trahes",
+      "capies",
+      "audies"
+     ],
+     [
+      "portabit",
+      "monebit",
+      "trahet",
+      "capiet",
+      "audiet"
+     ],
+     [
+      "portabimus",
+      "monebimus",
+      "trahemus",
+      "capiemus",
+      "audiemus"
+     ],
+     [
+      "portabitis",
+      "monebitis",
+      "trahetis",
+      "capietis",
+      "audietis"
+     ],
+     [
+      "portabunt",
+      "monebunt",
+      "trahent",
+      "capient",
+      "audient"
+     ]
+    ],
+    "impf": [
+     [
+      "portabam",
+      "monebam",
+      "trahebam",
+      "capiebam",
+      "audiebam"
+     ],
+     [
+      "portabas",
+      "monebas",
+      "trahebas",
+      "capiebas",
+      "audiebas"
+     ],
+     [
+      "portabat",
+      "monebat",
+      "trahebat",
+      "capiebat",
+      "audiebat"
+     ],
+     [
+      "portabamus",
+      "monebamus",
+      "trahebamus",
+      "capiebamus",
+      "audiebamus"
+     ],
+     [
+      "portabatis",
+      "monebatis",
+      "trahebatis",
+      "capiebatis",
+      "audiebatis"
+     ],
+     [
+      "portabant",
+      "monebant",
+      "trahebant",
+      "capiebant",
+      "audiebant"
+     ]
+    ],
+    "perf": [
+     [
+      "portavi",
+      "monui",
+      "traxi",
+      "cepi",
+      "audivi"
+     ],
+     [
+      "portavisti",
+      "monuisti",
+      "traxisti",
+      "cepisti",
+      "audivisti"
+     ],
+     [
+      "portavit",
+      "monuit",
+      "traxit",
+      "cepit",
+      "audivit"
+     ],
+     [
+      "portavimus",
+      "monuimus",
+      "traximus",
+      "cepimus",
+      "audivimus"
+     ],
+     [
+      "portavistis",
+      "monuistis",
+      "traxistis",
+      "cepistis",
+      "audivistis"
+     ],
+     [
+      "portaverunt",
+      "monuerunt",
+      "traxerunt",
+      "ceperunt",
+      "audiverunt"
+     ]
+    ],
+    "plup": [
+     [
+      "portaveram",
+      "monueram",
+      "traxeram",
+      "ceperam",
+      "audiveram"
+     ],
+     [
+      "portaveras",
+      "monueras",
+      "traxeras",
+      "ceperas",
+      "audiveras"
+     ],
+     [
+      "portaverat",
+      "monuerat",
+      "traxerat",
+      "ceperat",
+      "audiverat"
+     ],
+     [
+      "portaveramus",
+      "monueramus",
+      "traxeramus",
+      "ceperamus",
+      "audiveramus"
+     ],
+     [
+      "portaveratis",
+      "monueratis",
+      "traxeratis",
+      "ceperatis",
+      "audiveratis"
+     ],
+     [
+      "portaverant",
+      "monuerant",
+      "traxerant",
+      "ceperant",
+      "audiverant"
+     ]
+    ],
+    "futp": [
+     [
+      "portavero",
+      "monuero",
+      "traxero",
+      "cepero",
+      "audivero"
+     ],
+     [
+      "portaveris",
+      "monueris",
+      "traxeris",
+      "ceperis",
+      "audiveris"
+     ],
+     [
+      "portaverit",
+      "monuerit",
+      "traxerit",
+      "ceperit",
+      "audiverit"
+     ],
+     [
+      "portaverimus",
+      "monuerimus",
+      "traxerimus",
+      "ceperimus",
+      "audiverimus"
+     ],
+     [
+      "portaveritis",
+      "monueritis",
+      "traxeritis",
+      "ceperitis",
+      "audiveritis"
+     ],
+     [
+      "portaverint",
+      "monuerint",
+      "traxerint",
+      "ceperint",
+      "audiverint"
+     ]
+    ]
+   },
+   "pas": {
+    "pres": [
+     [
+      "portor",
+      "moneor",
+      "trahor",
+      "capior",
+      "audior"
+     ],
+     [
+      "portaris",
+      "moneris",
+      "traheris",
+      "caperis",
+      "audiris"
+     ],
+     [
+      "portatur",
+      "monetur",
+      "trahitur",
+      "capitur",
+      "auditur"
+     ],
+     [
+      "portamur",
+      "monemur",
+      "trahimur",
+      "capimur",
+      "audimur"
+     ],
+     [
+      "portamini",
+      "monemini",
+      "trahimini",
+      "capimini",
+      "audimini"
+     ],
+     [
+      "portantur",
+      "monentur",
+      "trahuntur",
+      "capiuntur",
+      "audiuntur"
+     ]
+    ],
+    "fut": [
+     [
+      "portabor",
+      "monebor",
+      "trahar",
+      "capiar",
+      "audiar"
+     ],
+     [
+      "portaberis",
+      "moneberis",
+      "traheris",
+      "capieris",
+      "audieris"
+     ],
+     [
+      "portabitur",
+      "monebitur",
+      "trahetur",
+      "capietur",
+      "audietur"
+     ],
+     [
+      "portabimur",
+      "monebimur",
+      "trahemur",
+      "capiemur",
+      "audiemur"
+     ],
+     [
+      "portabimini",
+      "monebimini",
+      "trahemini",
+      "capiemini",
+      "audiemini"
+     ],
+     [
+      "portabuntur",
+      "monebuntur",
+      "trahentur",
+      "capientur",
+      "audientur"
+     ]
+    ],
+    "impf": [
+     [
+      "portabar",
+      "monebar",
+      "trahebar",
+      "capiebar",
+      "audiebar"
+     ],
+     [
+      "portabaris",
+      "monebaris",
+      "trahebaris",
+      "capiebaris",
+      "audiebaris"
+     ],
+     [
+      "portabatur",
+      "monebatur",
+      "trahebatur",
+      "capiebatur",
+      "audiebatur"
+     ],
+     [
+      "portabamur",
+      "monebamur",
+      "trahebamur",
+      "capiebamur",
+      "audiebamur"
+     ],
+     [
+      "portabamini",
+      "monebamini",
+      "trahebamini",
+      "capiebamini",
+      "audiebamini"
+     ],
+     [
+      "portabantur",
+      "monebantur",
+      "trahebantur",
+      "capiebantur",
+      "audiebantur"
+     ]
+    ],
+    "perf": [
+     [
+      "portatus sum",
+      "monitus sum",
+      "tractus sum",
+      "captus sum",
+      "auditus sum"
+     ],
+     [
+      "portatus es",
+      "monitus es",
+      "tractus es",
+      "captus es",
+      "auditus es"
+     ],
+     [
+      "portatus est",
+      "monitus est",
+      "tractus est",
+      "captus est",
+      "auditus est"
+     ],
+     [
+      "portati sumus",
+      "moniti sumus",
+      "tracti sumus",
+      "capti sumus",
+      "auditi sumus"
+     ],
+     [
+      "portati estis",
+      "moniti estis",
+      "tracti estis",
+      "capti estis",
+      "auditi estis"
+     ],
+     [
+      "portati sunt",
+      "moniti sunt",
+      "tracti sunt",
+      "capti sunt",
+      "auditi sunt"
+     ]
+    ],
+    "plup": [
+     [
+      "portatus eram",
+      "monitus eram",
+      "tractus eram",
+      "captus eram",
+      "auditus eram"
+     ],
+     [
+      "portatus eras",
+      "monitus eras",
+      "tractus eras",
+      "captus eras",
+      "auditus eras"
+     ],
+     [
+      "portatus erat",
+      "monitus erat",
+      "tractus erat",
+      "captus erat",
+      "auditus erat"
+     ],
+     [
+      "portati eramus",
+      "moniti eramus",
+      "tracti eramus",
+      "capti eramus",
+      "auditi eramus"
+     ],
+     [
+      "portati eratis",
+      "moniti eratis",
+      "tracti eratis",
+      "capti eratis",
+      "auditi eratis"
+     ],
+     [
+      "portati erant",
+      "moniti erant",
+      "tracti erant",
+      "capti erant",
+      "auditi erant"
+     ]
+    ],
+    "futp": [
+     [
+      "portatus ero",
+      "monitus ero",
+      "tractus ero",
+      "captus ero",
+      "auditus ero"
+     ],
+     [
+      "portatus eris",
+      "monitus eris",
+      "tractus eris",
+      "captus eris",
+      "auditus eris"
+     ],
+     [
+      "portatus erit",
+      "monitus erit",
+      "tractus erit",
+      "captus erit",
+      "auditus erit"
+     ],
+     [
+      "portati erimus",
+      "moniti erimus",
+      "tracti erimus",
+      "capti erimus",
+      "auditi erimus"
+     ],
+     [
+      "portati eritis",
+      "moniti eritis",
+      "tracti eritis",
+      "capti eritis",
+      "auditi eritis"
+     ],
+     [
+      "portati erunt",
+      "moniti erunt",
+      "tracti erunt",
+      "capti erunt",
+      "auditi erunt"
+     ]
+    ]
+   }
+  },
+  "sub": {
+   "act": {
+    "pres": [
+     [
+      "portem",
+      "moneam",
+      "traham",
+      "capiam",
+      "audiam"
+     ],
+     [
+      "portes",
+      "moneas",
+      "trahas",
+      "capias",
+      "audias"
+     ],
+     [
+      "portet",
+      "moneat",
+      "trahat",
+      "capiat",
+      "audiat"
+     ],
+     [
+      "portemus",
+      "moneamus",
+      "trahamus",
+      "capiamus",
+      "audiamus"
+     ],
+     [
+      "portetis",
+      "moneatis",
+      "trahatis",
+      "capiatis",
+      "audiatis"
+     ],
+     [
+      "portent",
+      "moneant",
+      "trahant",
+      "capiant",
+      "audiant"
+     ]
+    ],
+    "impf": [
+     [
+      "portarem",
+      "monerem",
+      "traherem",
+      "caperem",
+      "audirem"
+     ],
+     [
+      "portares",
+      "moneres",
+      "traheres",
+      "caperes",
+      "audires"
+     ],
+     [
+      "portaret",
+      "moneret",
+      "traheret",
+      "caperet",
+      "audiret"
+     ],
+     [
+      "portaremus",
+      "moneremus",
+      "traheremus",
+      "caperemus",
+      "audiremus"
+     ],
+     [
+      "portaretis",
+      "moneretis",
+      "traheretis",
+      "caperetis",
+      "audiretis"
+     ],
+     [
+      "portarent",
+      "monerent",
+      "traherent",
+      "caperent",
+      "audirent"
+     ]
+    ],
+    "perf": [
+     [
+      "portaverim",
+      "monuerim",
+      "traxerim",
+      "ceperim",
+      "audiverim"
+     ],
+     [
+      "portaveris",
+      "monueris",
+      "traxeris",
+      "ceperis",
+      "audiveris"
+     ],
+     [
+      "portaverit",
+      "monuerit",
+      "traxerit",
+      "ceperit",
+      "audiverit"
+     ],
+     [
+      "portaverimus",
+      "monuerimus",
+      "traxerimus",
+      "ceperimus",
+      "audiverimus"
+     ],
+     [
+      "portaveritis",
+      "monueritis",
+      "traxeritis",
+      "ceperitis",
+      "audiveritis"
+     ],
+     [
+      "portaverint",
+      "monuerint",
+      "traxerint",
+      "ceperint",
+      "audiverint"
+     ]
+    ],
+    "plup": [
+     [
+      "portavissem",
+      "monuissem",
+      "traxissem",
+      "cepissem",
+      "audivissem"
+     ],
+     [
+      "portavisses",
+      "monuisses",
+      "traxisses",
+      "cepisses",
+      "audivisses"
+     ],
+     [
+      "portavisset",
+      "monuisset",
+      "traxisset",
+      "cepisset",
+      "audivisset"
+     ],
+     [
+      "portavissemus",
+      "monuissemus",
+      "traxissemus",
+      "cepissemus",
+      "audivissemus"
+     ],
+     [
+      "portavissetis",
+      "monuissetis",
+      "traxissetis",
+      "cepissetis",
+      "audivissetis"
+     ],
+     [
+      "portavissent",
+      "monuissent",
+      "traxissent",
+      "cepissent",
+      "audivissent"
+     ]
+    ],
+    "fut": [
+     [
+      "portaturus sim",
+      "moniturus sim",
+      "tracturus sim",
+      "capturus sim",
+      "auditurus sim"
+     ],
+     [
+      "portaturus sis",
+      "moniturus sis",
+      "tracturus sis",
+      "capturus sis",
+      "auditurus sis"
+     ],
+     [
+      "portaturus sit",
+      "moniturus sit",
+      "tracturus sit",
+      "capturus sit",
+      "auditurus sit"
+     ],
+     [
+      "portaturi simus",
+      "monituri simus",
+      "tracturi simus",
+      "capturi simus",
+      "audituri simus"
+     ],
+     [
+      "portaturi sitis",
+      "monituri sitis",
+      "tracturi sitis",
+      "capturi sitis",
+      "audituri sitis"
+     ],
+     [
+      "portaturi sint",
+      "monituri sint",
+      "tracturi sint",
+      "capturi sint",
+      "audituri sint"
+     ]
+    ],
+    "fip": [
+     [
+      "portaturus essem",
+      "moniturus essem",
+      "tracturus essem",
+      "capturus essem",
+      "auditurus essem"
+     ],
+     [
+      "portaturus esses",
+      "moniturus esses",
+      "tracturus esses",
+      "capturus esses",
+      "auditurus esses"
+     ],
+     [
+      "portaturus esset",
+      "moniturus esset",
+      "tracturus esset",
+      "capturus esset",
+      "auditurus esset"
+     ],
+     [
+      "portaturi essemus",
+      "monituri essemus",
+      "tracturi essemus",
+      "capturi essemus",
+      "audituri essemus"
+     ],
+     [
+      "portaturi essetis",
+      "monituri essetis",
+      "tracturi essetis",
+      "capturi essetis",
+      "audituri essetis"
+     ],
+     [
+      "portaturi essent",
+      "monituri essent",
+      "tracturi essent",
+      "capturi essent",
+      "audituri essent"
+     ]
+    ]
+   },
+   "pas": {
+    "pres": [
+     [
+      "porter",
+      "monear",
+      "trahar",
+      "capiar",
+      "audiar"
+     ],
+     [
+      "porteris",
+      "monearis",
+      "traharis",
+      "capiaris",
+      "audiaris"
+     ],
+     [
+      "portetur",
+      "moneatur",
+      "trahatur",
+      "capiatur",
+      "audiatur"
+     ],
+     [
+      "portemur",
+      "moneamur",
+      "trahamur",
+      "capiamur",
+      "audiamur"
+     ],
+     [
+      "portemini",
+      "moneamini",
+      "trahamini",
+      "capiamini",
+      "audiamini"
+     ],
+     [
+      "portentur",
+      "moneantur",
+      "trahantur",
+      "capiantur",
+      "audiantur"
+     ]
+    ],
+    "impf": [
+     [
+      "portarer",
+      "monerer",
+      "traherer",
+      "caperer",
+      "audirer"
+     ],
+     [
+      "portareris",
+      "monereris",
+      "trahereris",
+      "capereris",
+      "audireris"
+     ],
+     [
+      "portaretur",
+      "moneretur",
+      "traheretur",
+      "caperetur",
+      "audiretur"
+     ],
+     [
+      "portaremur",
+      "moneremur",
+      "traheremur",
+      "caperemur",
+      "audiremur"
+     ],
+     [
+      "portaremini",
+      "moneremini",
+      "traheremini",
+      "caperemini",
+      "audiremini"
+     ],
+     [
+      "portarentur",
+      "monerentur",
+      "traherentur",
+      "caperentur",
+      "audirentur"
+     ]
+    ],
+    "perf": [
+     [
+      "portatus sim",
+      "monitus sim",
+      "tractus sim",
+      "captus sim",
+      "auditus sim"
+     ],
+     [
+      "portatus sis",
+      "monitus sis",
+      "tractus sis",
+      "captus sis",
+      "auditus sis"
+     ],
+     [
+      "portatus sit",
+      "monitus sit",
+      "tractus sit",
+      "captus sit",
+      "auditus sit"
+     ],
+     [
+      "portati simus",
+      "moniti simus",
+      "tracti simus",
+      "capti simus",
+      "auditi simus"
+     ],
+     [
+      "portati sitis",
+      "moniti sitis",
+      "tracti sitis",
+      "capti sitis",
+      "auditi sitis"
+     ],
+     [
+      "portati sint",
+      "moniti sint",
+      "tracti sint",
+      "capti sint",
+      "auditi sint"
+     ]
+    ],
+    "plup": [
+     [
+      "portatus essem",
+      "monitus essem",
+      "tractus essem",
+      "captus essem",
+      "auditus essem"
+     ],
+     [
+      "portatus esses",
+      "monitus esses",
+      "tractus esses",
+      "captus esses",
+      "auditus esses"
+     ],
+     [
+      "portatus esset",
+      "monitus esset",
+      "tractus esset",
+      "captus esset",
+      "auditus esset"
+     ],
+     [
+      "portati essemus",
+      "moniti essemus",
+      "tracti essemus",
+      "capti essemus",
+      "auditi essemus"
+     ],
+     [
+      "portati essetis",
+      "moniti essetis",
+      "tracti essetis",
+      "capti essetis",
+      "auditi essetis"
+     ],
+     [
+      "portati essent",
+      "moniti essent",
+      "tracti essent",
+      "capti essent",
+      "auditi essent"
+     ]
+    ]
+   }
+  }
+ },
+ "notes": {
+  "ind.act.pres": "Note the 3rd person plurals of the 3rd, mixed and 4th conjugations.",
+  "ind.act.perf": "Note the irregular perfect stems of the 2nd, 3rd and mixed conjugations.",
+  "ind.pas.pres": "Note caperis: the mixed conjugation follows the 3rd here.",
+  "ind.pas.perf": "The participle agrees with the subject in gender and number.",
+  "ind.pas.plup": "The participle agrees with the subject in gender and number.",
+  "ind.pas.futp": "The participle agrees with the subject in gender and number.",
+  "sub.act.perf": "Identical to the future perfect indicative except in the 1st person singular.",
+  "sub.act.fut": "Periphrastic future: future active participle + present subjunctive of sum. Rare; seen in indirect questions and result clauses.",
+  "sub.act.fip": "Future active participle + imperfect subjunctive of sum. The historic-sequence version of -urus sim.",
+  "sub.pas.perf": "The participle agrees with the subject in gender and number.",
+  "sub.pas.plup": "The participle agrees with the subject in gender and number."
+ }
+}
