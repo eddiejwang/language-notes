@@ -1,3 +1,4 @@
 [
-  { "title": "Latin", "file": "notes/latin.md", "verbs": "notes/latin-verbs.json" }
+  { "title": "Latin", "file": "notes/latin.md", "verbs": "notes/latin-verbs.json" },
+  { "title": "Greek", "file": "notes/greek.md" }
 ]
