@@ -6,8 +6,6 @@ Accents are left off, as in the rest of these notes, except where they tell two 
 
 ## The article
 
-> The definite article, translating ‘a’, the article as a pronoun
-
 ### Definite article
 
 - Like English, Greek uses the definite article (the). A noun without one is translated ‘a …’: ὁ δουλος (the slave), δουλος (a slave).
