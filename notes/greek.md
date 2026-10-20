@@ -731,7 +731,7 @@ Passive future and aorist:
 - Active: -οιμι, -οις, -οι, -οιμεν, -οιτε, -οιεν. Weak aorist: -σαιμι, -σαις, -σαι, -σαιμεν, -σαιτε, -σαιεν (with common alternatives -σειας, -σειε(ν), -σειαν).
 - Middle/passive: -οιμην, -οιο, -οιτο, -οιμεθα, -οισθε, -οιντο. Weak aorist middle: -σαιμην, -σαιο, -σαιτο etc.
 - Aorist passive: -θειην, -θειης, -θειη, -θειμεν, -θειτε, -θειεν.
-- Main uses: wishes, the potential ‘would’ (with ἀν), future less vivid conditions, and replacing the indicative or subjunctive in historic sequence.
+- Main uses: wishes, the potential ‘would’ (with ἀν), closed future conditionals, and replacing the indicative or subjunctive in historic sequence.
 - The future optative only appears in indirect speech.
 
 ### Imperative
@@ -1326,11 +1326,11 @@ OCR doesn’t expect you to write accents, but you do need to tell apart words s
 
 ## Uses of ἀν
 
-> Potential, unreal, iterative, indefinite
+> Potential, closed conditionals, ‘used to’, indefinite
 
-- ἀν has no single translation. It marks a verb as potential, unreal or indefinite.
+- ἀν has no single translation. It marks a verb as potential (‘would’), part of a closed conditional, or indefinite.
 - With the optative: potential (‘would, could, might’): ἡδεως ἀν ἀκουσαιμι (I would gladly hear).
-- With a past indicative: unreal (‘would be’, ‘would have’): imperfect for the present, aorist for the past: ἐνικησαν ἀν (they would have won). This is the apodosis of an unreal conditional.
+- With a past indicative: ‘would be’, ‘would have’, as in the apodosis of a closed conditional: imperfect for the present, aorist for the past: ἐνικησαν ἀν (they would have won).
 - With the imperfect or aorist indicative, it can also mean ‘used to’ (iterative): ἐλεγεν ἀν (he would say, he used to say).
 - With the subjunctive in indefinite clauses, joined onto the conjunction: ἐαν (εἰ + ἀν), ὁταν (ὁτε + ἀν), ἐπειδαν (ἐπειδη + ἀν), ὃς ἀν (whoever).
 - In indirect speech, ἀν stays with the infinitive or participle if it was in the original: οἰομαι αὐτον ἐλθειν ἀν (I think he would come).
@@ -1409,26 +1409,29 @@ There are three constructions, depending on the introducing verb.
 
 ### Conditional
 
+- Open conditionals might or might not be true; they take the indicative (or ἐαν + subjunctive for the future).
+- Closed conditionals are remote or untrue (‘would’); they always have ἀν in the apodosis.
 - The protasis (the ‘if’ clause) takes μη; the apodosis takes οὐ.
 
 | Type | Protasis | Apodosis |
 |---|---|---|
 | Open (present or past) | εἰ + indicative | indicative |
-| Future more vivid | ἐαν + subjunctive | future indicative |
-| Future less vivid | εἰ + optative | optative + ἀν |
-| Unreal present | εἰ + imperfect | imperfect + ἀν |
-| Unreal past | εἰ + aorist | aorist + ἀν |
-| General present | ἐαν + subjunctive | present indicative |
-| General past | εἰ + optative | imperfect indicative |
+| Open (future) | ἐαν + subjunctive | future indicative |
+| Open, ‘if ever’ (present) | ἐαν + subjunctive | present indicative |
+| Open, ‘if ever’ (past) | εἰ + optative | imperfect indicative |
+| Closed (future) | εἰ + optative | optative + ἀν |
+| Closed (present) | εἰ + imperfect | imperfect + ἀν |
+| Closed (past) | εἰ + aorist | aorist + ἀν |
 
-- Open: εἰ τουτο λεγει, ἁμαρτανει (if he says this, he is wrong)
-- Future more vivid: ἐαν τουτο λεγῃ, ἁμαρτησεται (if he says this, he will be wrong)
-- Future less vivid: εἰ τουτο λεγοι, ἁμαρτανοι ἀν (if he were to say this, he would be wrong)
-- Unreal present: εἰ τουτο ἐλεγεν, ἡμαρτανεν ἀν (if he were saying this, he would be wrong)
-- Unreal past: εἰ τουτο εἰπεν, ἡμαρτεν ἀν (if he had said this, he would have been wrong)
-- General present: ἐαν τις τουτο λεγῃ, ἁμαρτανει (if anyone ever says this, he is wrong)
-- General past: εἰ τις τουτο λεγοι, ἡμαρτανεν (if anyone ever said this, he was wrong)
-- Mixed conditions are possible: translate each half by its own type.
+- Open (present): εἰ τουτο λεγει, ἁμαρτανει (if he says this, he is wrong)
+- Open (future): ἐαν τουτο λεγῃ, ἁμαρτησεται (if he says this, he will be wrong)
+- Open, ‘if ever’ (present): ἐαν τις τουτο λεγῃ, ἁμαρτανει (if anyone ever says this, he is wrong)
+- Open, ‘if ever’ (past): εἰ τις τουτο λεγοι, ἡμαρτανεν (if anyone ever said this, he was wrong)
+- Closed (future): εἰ τουτο λεγοι, ἁμαρτανοι ἀν (if he were to say this, he would be wrong)
+- Closed (present): εἰ τουτο ἐλεγεν, ἡμαρτανεν ἀν (if he were saying this, he would be wrong)
+- Closed (past): εἰ τουτο εἰπεν, ἡμαρτεν ἀν (if he had said this, he would have been wrong)
+- Note that, like Latin, the tense in a closed conditional is ‘moved back’: the imperfect for the present, the aorist for the past.
+- Mixed conditionals are possible: translate each half by its own type.
 - εἰ μη means ‘unless’ or ‘if not’; εἰ δε μη means ‘otherwise’.
 
 ### Causal
