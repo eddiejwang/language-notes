@@ -637,11 +637,105 @@ Future imperative (ignore for A level), used when there is a distinct reference 
 ### Irregular verbs
 
 - Full forms are on pp. 273–274 in the textbook.
-- sum (I am), possum (I am able), eo (I go), volo (I want), nolo (I do not want), malo (I prefer), fio (I become), fero (I bring).
+- The perfect system is regular: perfect stem + the usual endings (fui, fueram, fuero, fuerim, fuissem).
+
+| Verb | Infinitive | Perfect | Meaning |
+|---|---|---|---|
+| sum | esse | fui | I am |
+| possum | posse | potui | I am able |
+| eo | ire | ii (ivi) | I go |
+| volo | velle | volui | I want |
+| nolo | nolle | nolui | I do not want |
+| malo | malle | malui | I prefer |
+| fio | fieri | factus sum | I become, I am made |
+| fero | ferre | tuli | I bring, I carry |
+
+#### Present indicative
+
+| Person | sum | possum | eo | volo | nolo | malo | fio | fero |
+|---|---|---|---|---|---|---|---|---|
+| 1st sg. | sum | possum | eo | volo | nolo | malo | fio | fero |
+| 2nd sg. | es | potes | is | vis | non vis | mavis | fis | fers |
+| 3rd sg. | est | potest | it | vult | non vult | mavult | fit | fert |
+| 1st pl. | sumus | possumus | imus | volumus | nolumus | malumus | fimus | ferimus |
+| 2nd pl. | estis | potestis | itis | vultis | non vultis | mavultis | fitis | fertis |
+| 3rd pl. | sunt | possunt | eunt | volunt | nolunt | malunt | fiunt | ferunt |
+
+#### Future indicative
+
+| Person | sum | possum | eo | volo | nolo | malo | fio | fero |
+|---|---|---|---|---|---|---|---|---|
+| 1st sg. | ero | potero | ibo | volam | nolam | malam | fiam | feram |
+| 2nd sg. | eris | poteris | ibis | voles | noles | males | fies | feres |
+| 3rd sg. | erit | poterit | ibit | volet | nolet | malet | fiet | feret |
+| 1st pl. | erimus | poterimus | ibimus | volemus | nolemus | malemus | fiemus | feremus |
+| 2nd pl. | eritis | poteritis | ibitis | voletis | noletis | maletis | fietis | feretis |
+| 3rd pl. | erunt | poterunt | ibunt | volent | nolent | malent | fient | ferent |
+
+#### Imperfect indicative
+
+| Person | sum | possum | eo | volo | nolo | malo | fio | fero |
+|---|---|---|---|---|---|---|---|---|
+| 1st sg. | eram | poteram | ibam | volebam | nolebam | malebam | fiebam | ferebam |
+| 2nd sg. | eras | poteras | ibas | volebas | nolebas | malebas | fiebas | ferebas |
+| 3rd sg. | erat | poterat | ibat | volebat | nolebat | malebat | fiebat | ferebat |
+| 1st pl. | eramus | poteramus | ibamus | volebamus | nolebamus | malebamus | fiebamus | ferebamus |
+| 2nd pl. | eratis | poteratis | ibatis | volebatis | nolebatis | malebatis | fiebatis | ferebatis |
+| 3rd pl. | erant | poterant | ibant | volebant | nolebant | malebant | fiebant | ferebant |
+
+#### Present subjunctive
+
+| Person | sum | possum | eo | volo | nolo | malo | fio | fero |
+|---|---|---|---|---|---|---|---|---|
+| 1st sg. | sim | possim | eam | velim | nolim | malim | fiam | feram |
+| 2nd sg. | sis | possis | eas | velis | nolis | malis | fias | feras |
+| 3rd sg. | sit | possit | eat | velit | nolit | malit | fiat | ferat |
+| 1st pl. | simus | possimus | eamus | velimus | nolimus | malimus | fiamus | feramus |
+| 2nd pl. | sitis | possitis | eatis | velitis | nolitis | malitis | fiatis | feratis |
+| 3rd pl. | sint | possint | eant | velint | nolint | malint | fiant | ferant |
+
+#### Imperfect subjunctive
+
+| Person | sum | possum | eo | volo | nolo | malo | fio | fero |
+|---|---|---|---|---|---|---|---|---|
+| 1st sg. | essem | possem | irem | vellem | nollem | mallem | fierem | ferrem |
+| 2nd sg. | esses | posses | ires | velles | nolles | malles | fieres | ferres |
+| 3rd sg. | esset | posset | iret | vellet | nollet | mallet | fieret | ferret |
+| 1st pl. | essemus | possemus | iremus | vellemus | nollemus | mallemus | fieremus | ferremus |
+| 2nd pl. | essetis | possetis | iretis | velletis | nolletis | malletis | fieretis | ferretis |
+| 3rd pl. | essent | possent | irent | vellent | nollent | mallent | fierent | ferrent |
+
+#### Notes
+
+- possum is pot- + sum: pot- before a vowel, pos- before s (potest, possumus).
+- nolo is ne + volo; malo is magis + volo.
+- The imperfect subjunctive is still the infinitive + endings (esse → essem, velle → vellem, ferre → ferrem).
+- essem is sometimes forem (foret, forent).
+- eo: present participle iens, euntis; gerund eundi. The perfect often contracts: isti, istis, isse. Compounds (redeo, exeo, pereo, transeo) go the same way.
+- fio is the passive of facio in the present, future and imperfect (fit: it is done, it happens). The perfect passive comes from facio: factus sum.
+- fero passive: feror, ferris, fertur, ferimur, ferimini, feruntur; infinitive ferri; PPP latus. Compounds include affero, aufero (abstuli, ablatum), confero and refero.
+- possum, volo and malo have no imperative; nolo only has noli, nolite.
 
 ### Impersonal verbs
 
-- Not written yet (cf. Colebourn 40).
+- Impersonal verbs only appear in the 3rd person singular (and the infinitive), with ‘it’ as the subject in English.
+- The tense goes on the impersonal verb, not the infinitive: mihi licuit exire (I was allowed to leave).
+- Some take the dative of the person and an infinitive:
+    - licet (it is allowed): mihi licet exire (I am allowed to leave)
+    - placet (it pleases, it is decided): senatui placuit legatos mittere (the senate decided to send envoys)
+    - necesse est (it is necessary): nobis necesse est fugere (we must flee)
+- Some take the accusative of the person and an infinitive:
+    - oportet (it is right, one ought): me oportet abire (I ought to leave)
+    - decet (it is fitting): te decet tacere (it is fitting for you to keep quiet)
+- Verbs of feeling take the accusative of the person and the genitive of the cause:
+    - pudet (shame), piget (annoyance), paenitet (regret), taedet (boredom), miseret (pity)
+    - e.g. me pudet stultitiae (I am ashamed of my stupidity); eos paenitet consilii (they regret their plan)
+- interest and refert (it concerns, it matters) take the genitive of the person, but mea, tua, sua, nostra, vestra for ‘me’, ‘you’, etc.: mea interest (it matters to me).
+- Weather verbs: pluit (it rains), ningit (it snows), tonat (it thunders).
+- Intransitive verbs can be used impersonally in the passive, especially in the perfect:
+    - pugnatum est (there was fighting; a battle was fought)
+    - ventum est ad urbem (they came to the city)
+- Verbs that take the dative stay impersonal in the passive, with the person still in the dative: mihi persuasum est (I was persuaded). The same goes for the gerundive (parendum est legibus).
 
 ## Verb tables
 
@@ -867,6 +961,26 @@ Future imperative (ignore for A level), used when there is a distinct reference 
 - If the introducing verb is passive, the subject is nominative.
 - Even if the introducing verb doesn’t normally take an accusative, the subject of the indirect statement is still accusative.
 - (Post A level) If a reported clause has a subordinate clause depending on it, that verb goes into the subjunctive: quod vera dixissem, negavit se me puniturum esse (because I had told the truth, he said that he would not punish me).
+
+### Subordinate clauses in indirect speech
+
+- Any subordinate clause inside reported speech goes into the subjunctive, even if it was indicative in the original. The tense follows the sequence of the introducing verb.
+    - e.g. puer quem vidi stultus est → dixit puerum quem vidisset stultum esse (he said that the boy whom he had seen was stupid)
+- Tense changes in historic sequence:
+    - present → imperfect subjunctive
+    - perfect → pluperfect subjunctive
+    - future → imperfect subjunctive (or -urus essem)
+    - future perfect → pluperfect subjunctive
+- In primary sequence, use the present and perfect subjunctive instead.
+- Pronouns and words like ‘here’ and ‘now’ shift to the reporter’s point of view:
+    - ego, nos → se; meus, noster → suus
+    - tu, vos → ille, is
+    - hic → ille; nunc → tum; hodie → illo die
+- Conditionals: the protasis goes into the subjunctive by sequence, and the apodosis becomes an infinitive.
+    - si hoc feceris, te puniam → dixit se eum puniturum esse si id fecisset (he said he would punish him if he did it)
+    - In a closed conditional about the past, the apodosis becomes -urus fuisse: dixit se eum puniturum fuisse si id fecisset (he said he would have punished him if he had done it).
+- Note that if a subordinate clause is the writer’s own comment rather than part of what was said, it stays indicative: dixit urbem, quae prope erat, captam esse (‘which was nearby’ is the writer’s fact, not part of the report).
+- (Post A level) In long stretches of reported speech, often in Livy and Caesar, main-clause commands become subjunctive (ne for negatives), and so do main-clause questions.
 
 ### Relative clauses
 
